@@ -1,4 +1,4 @@
-Duel.LoadScript("../../constant.lua")
+Duel.LoadScript("constant.lua")
 
 --Armatos Legio Gladius
 local s, id = GetID()
