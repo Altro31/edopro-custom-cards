@@ -1,0 +1,2 @@
+
+CARDS_A_LEGIO = 0x1789
