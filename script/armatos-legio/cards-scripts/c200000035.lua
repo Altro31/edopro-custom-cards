@@ -1,3 +1,5 @@
+Duel.LoadScript("constant.lua")
+
 --Armatos Legio Gladius
 local s, id = GetID()
 function s.initial_effect(c)
