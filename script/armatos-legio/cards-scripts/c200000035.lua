@@ -2,8 +2,7 @@
 --Armatos Legio Gladius
 local s, id = GetID()
 function s.initial_effect(c)
-	Debug.ShowHint(CARD_A_COLOSSEUM .. "")
-	AddALProtection(c)
+	c:AddALProtection()
 	--search
 	local e1 = Effect.CreateEffect(c)
 	e1:SetCategory(CATEGORY_TOHAND + CATEGORY_SEARCH)
