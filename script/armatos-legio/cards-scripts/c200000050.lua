@@ -1,9 +1,7 @@
-Duel.LoadScript("continuous.lua")
-
 --Armatos Legio Seeker
 local s,id=GetID()
 function s.initial_effect(c)
-	addALProtection(c)
+	c:AddALProtection()
 	----search
 	--local e1=Effect.CreateEffect(c)
     --e1:SetCategory(CATEGORY_TOHAND+CATEGORY_SEARCH)

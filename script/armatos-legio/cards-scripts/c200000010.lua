@@ -1,7 +1,6 @@
 --Armatos Legio Scutum
 
 local s, id = GetID()
----@diagnostic disable-next-line: duplicate-set-field
 function s.initial_effect(c)
 	c:AddALProtection()
 	--effect protection

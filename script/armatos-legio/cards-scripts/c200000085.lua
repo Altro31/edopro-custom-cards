@@ -1,6 +1,7 @@
 --Armatos Legio Galea
 local s,id=GetID()
 function s.initial_effect(c)
+	c:AddALProtection()
 	--Special Summon this card from the hand
 	local e1=Effect.CreateEffect(c)
 	e1:SetCategory(CATEGORY_SPECIAL_SUMMON)
