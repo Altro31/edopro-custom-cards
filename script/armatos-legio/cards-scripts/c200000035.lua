@@ -1,4 +1,3 @@
-Duel.LoadScript("c200000990.lua")
 
 --Armatos Legio Gladius
 local s, id = GetID()
