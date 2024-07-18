@@ -1,6 +1,8 @@
 --聖蔓の略奪
 --Sunvine Plunder
 --Scripted by Playmaker 772211, fixed by pyrQ
+Duel.LoadScript("c200000990.lua")
+
 local s,id=GetID()
 function s.initial_effect(c)
 	--Give control of Judgment Arrows

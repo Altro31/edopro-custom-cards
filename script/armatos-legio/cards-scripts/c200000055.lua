@@ -1,6 +1,6 @@
+--Armatos Colosseum
 Duel.LoadScript("c200000990.lua")
 
---Armatos Colosseum
 local s,id=GetID()
 function s.initial_effect(c)
 	--Activate

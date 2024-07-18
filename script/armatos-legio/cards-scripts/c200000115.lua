@@ -1,5 +1,7 @@
 --裁きの矢
 --Judgment Arrows
+Duel.LoadScript("c200000990.lua")
+
 local s,id=GetID()
 function s.initial_effect(c)
 	Card.SetUniqueOnField(c,1,0,id,LOCATION_SZONE)
