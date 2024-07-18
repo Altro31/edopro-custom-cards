@@ -17,4 +17,21 @@ function Card.AddALProtection(card)
     return e1
 end
 
---------------------------------------------
+-- Filter para los "Armatos Legio" cuando un monstruo de Enlace "Armatos Legio" los apunte
+function Auxiliary.ALWeapCon(linkmonster,...)
+	local cards={...}
+	local check=true
+	for _,tc in ipairs(cards) do
+		if not linkmonster:GetLinkedGroup():IsContains(tc) then
+			check=false
+			break
+		end
+	end
+	return linkmonster:IsLinkMonster() and linkmonster:IsSetCard(CARDS_A_LEGIO) and check
+end
+
+-- Condición de Target para los "Armatos Legio" cuando un monstruo de Enlace "Armatos Legio" los apunte
+function Auxiliary.ALWeapTg(e,tc)
+	local c=e:GetHandler()
+	return tc:IsLinkMonster() and tc:IsSetCard(CARDS_A_LEGIO) and tc:GetLinkedGroup():IsContains(c)
+end
