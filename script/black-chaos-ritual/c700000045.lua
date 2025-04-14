@@ -1,12 +1,16 @@
 local s, id = GetID()
 function s.initial_effect(c)
     --Activate
-    local e1=Ritual.CreateProc({handler=c,lvtype=RITPROC_GREATER,filter=aux.FilterBoolFunction(Card.IsCode,700000000),lv=11,extrafil=s.extragroup,
+    local e1=Ritual.CreateProc({handler=c,lvtype=RITPROC_GREATER,filter=s.ritualfil,lv=7,extrafil=s.extragroup,
 									extraop=s.extraop,matfilter=s.matfilter,location=LOCATION_EXTRA,extratg=s.extratg})
 	c:RegisterEffect(e1)
 end
 
-s.listed_names = { 700000000 }
+s.listed_names = { 700000035, 700000040, }
+
+function s.ritualfil(c)
+    return (c:IsCode(700000035) or c:IsCode(700000040)) and c:IsRitualMonster()
+end
 
 function s.matfilter(c)
 	return c:IsFaceup() and c:IsAbleToGrave() and not c:IsMaximumModeSide()
